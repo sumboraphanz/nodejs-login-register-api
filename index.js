@@ -14,8 +14,9 @@ app.use(cors())
 app.use(express.json())
 conn()
 
-app.get("/",(req,res)=>{
-    res.send("This api created by sumboraphan")
+app.get("/",async (req,res)=>{
+    res.send(await userSchema.find({}))
+    
 })
 app.use("/login",loginRouter)
 app.use("/register",registerRouter)
