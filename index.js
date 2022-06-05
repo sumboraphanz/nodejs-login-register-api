@@ -15,7 +15,7 @@ app.use(express.json())
 conn()
 
 app.get("/",async (req,res)=>{
-    res.send(await userSchema.find({}))
+    res.send(process.env.PORT)
     
 })
 app.use("/login",loginRouter)
