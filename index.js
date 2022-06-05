@@ -10,10 +10,13 @@ const registerRouter = require("./routes/register")
 const userSchema = require("./schemas/user")
 
 const app = express()
-app.use(express.json())
 app.use(cors())
+app.use(express.json())
 conn()
 
+app.get("/",(req,res)=>{
+    res.send("This api created by sumboraphan")
+})
 app.use("/login",loginRouter)
 app.use("/register",registerRouter)
 
