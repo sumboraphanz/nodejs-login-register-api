@@ -15,7 +15,7 @@ app.use(express.json())
 conn()
 
 app.get("/",async (req,res)=>{
-    res.send(process.env.URI)
+    res.send("This api is bolong to sumboraphan")
     
 })
 app.use("/login",loginRouter)
